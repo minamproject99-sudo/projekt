@@ -2,7 +2,7 @@ import "./Proba.css"
 const Proba = () => {
     return (
         <>
-        <p className="novaKlasa">Hello world!</p>
+        <p className="novaKlasa">Hello world, I am here!</p>
         </>
     );
 };
