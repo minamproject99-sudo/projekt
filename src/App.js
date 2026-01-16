@@ -1,10 +1,11 @@
-import Proba from './components/Proba';
+
 import './App.css';
+import Home from './pages/Home';
 
 function App() {
   return (
     <>
-    <Proba />
+    <Home />
     
     </>
   );
