@@ -70,7 +70,21 @@ a{
   margin-left: -32px;
 }
 
+.footer-top {
+    background-color: #404243;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 16px;
+}
 
+.footer-top .btn{
+    background-color: #fff;
+    color: #141615;
+    border-radius: 80px;
+    font-size: 14px;
+    line-height: 1;
+    padding: 20px;
+}
 
 
 footer {
