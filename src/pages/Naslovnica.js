@@ -1,13 +1,13 @@
 
 
-const Home = () => {
+const Naslovnica = () => {
   return (
    <>
 
-      <section className="hero d-flex align-items-center text-white mb-5">
+      <section className="hero-h d-flex align-items-center mb-5">
         <div className="container">
-          <span className="text-uppercase">Veloretti Business</span>
-          <h1>Bike Lease Plan For Employees</h1>
+        <h1 className="naslov-1 ms-3">Tvoje tijelo zaslužuje biti sretno i zdravo!</h1>
+        <p className="podnaslov">Pronađi balans kroz moć aromaterapije, iscjeljujući dodir masaže i duhovni rad koji te vraća sebi.</p>
         </div>
       </section>
 
@@ -113,4 +113,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Naslovnica;

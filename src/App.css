@@ -1,28 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 body {
-    font-family: "Questrial", sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
     line-height: 21px;
-    color: #141651;
+    color: #502419;
 }
 
 img {
   max-width: 100%;
 }
 
+.podnaslov{
+  font-size: 36px;
+  line-height: 50px;
+  margin-top: 30px;
+  margin-left: 20px;
+  opacity: 0.9;
+}
 
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: #f8f9fa !important;
+}
 .py-5 {
     padding-top: 4rem !important;
     padding-bottom: 4rem !important;
+}
+
+.navbar{
+padding: 20px 100px;
+font-weight: 500;
 }
 
 h2{
 line-height: 50px;
 font-size: 50px;
 letter-spacing: 0%;
+font-weight: 700;
 }
 
 a{
@@ -38,12 +55,13 @@ a{
   opacity: 0.9;
 }
 
-.hero{
-  background-image: url("../src/components/img/hero.jpg");
+.hero-h{
+  background-image: url("../src/components/img/hero-h.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 100vh;
+  font-weight: 650;
 }
 
 
@@ -69,6 +87,15 @@ a{
   margin-right: 9px;
   margin-left: -32px;
 }
+
+.saying-yes h1{
+font-size: 35px;
+font-weight: 650;
+color: #000;
+background-color: #F5F5F5;
+}
+
+
 
 .footer-top {
     background-color: #404243;
