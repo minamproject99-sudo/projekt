@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import React from 'react'
 
 const Nav = () => {
@@ -5,9 +6,9 @@ const Nav = () => {
     <>
            <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <a className="navbar-brand" href="/index.html">
+          <Link className="navbar-brand" to="/index.html">
             <img src="img/logo-1.png" alt="Logo" height="70" />
-          </a>
+          </Link>
 
           <button
             className="navbar-toggler"
@@ -25,86 +26,74 @@ const Nav = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li className="nav-item">
-                <a className="nav-link" href="/">NASLOVNICA</a>
+                <Link className="nav-link" to="/">NASLOVNICA</Link>
               </li>
              
               <li className="nav-item">
-                <a className="nav-link" href="/omeni">O MENI</a>
+                <Link className="nav-link" to="/omeni">O MENI</Link>
               </li>
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
-                  href="/masaze"
+                  to="/masaze"
                   id="ddMasaze"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   MASAŽE
-                </a>
+                </Link>
                 <ul className="dropdown-menu" aria-labelledby="ddMasaze">
-                  <li><a className="dropdown-item" href="/klasicna-masaza">Klasična masaža</a></li>
-                  <li><a className="dropdown-item" href="/sportska-masaza">Sportska masaža</a></li>
-                  <li><a className="dropdown-item" href="/relax-masaza">Relax masaža</a></li>
+                  <li><Link className="dropdown-item" to="/klasicna-masaza">Klasična masaža</Link></li>
+                  <li><Link className="dropdown-item" to="/sportska-masaza">Sportska masaža</Link></li>
+                  <li><Link className="dropdown-item" to="/relax-masaza">Relax masaža</Link></li>
                 </ul>
               </li>
 
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
-                  href="/aromaterapija"
+                  to="/aromaterapija"
                   id="ddAromaterapija"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   AROMATERAPIJA
-                </a>
+                </Link>
                 <ul className="dropdown-menu" aria-labelledby="ddAromaterapija">
-                  <li><a className="dropdown-item" href="/ljekoviti-pripravci">Ljekoviti pripravci</a></li>
-                  <li><a className="dropdown-item" href="/kreme-i-macerati">Kreme i macerati</a></li>
+                  <li><Link className="dropdown-item" to="/ljekoviti-pripravci">Ljekoviti pripravci</Link></li>
+                  <li><Link className="dropdown-item" to="/kreme-i-macerati">Kreme i macerati</Link></li>
                 </ul>
               </li>
 
                 <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
-                  href="/meditacije"
+                  to="/meditacije"
                   id="ddMeditacije"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                  MEDITACIJE
-                </a>
+                </Link>
                 <ul className="dropdown-menu" aria-labelledby="ddMeditacije">
-                  <li><a className="dropdown-item" href="/buddha-vipassana">Buddha Vipassana</a></li>
-                  <li><a className="dropdown-item" href="/Buddha-vipassana-saying-yes">Buddha Vipassana Saying YES</a></li>
-                </ul>
-              </li>
-
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="/poklonbon"
-                  id="ddPoklonBon"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  POKLON BON 
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="ddPoklonBon">
-                  <li><a className="dropdown-item" href="/parcijalna-masaza">Parcijalna masaža</a></li>
-                  <li><a className="dropdown-item" href="/masaza-cijelog-tijela">Masaža cijelog tijela</a></li>
+                  <li><Link className="dropdown-item" to="/buddha-vipassana">Buddha Vipassana</Link></li>
+                  <li><Link className="dropdown-item" to="/Buddha-vipassana-saying-yes">Buddha Vipassana Saying YES</Link></li>
                 </ul>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="/blog">BLOG</a>
+                <Link className="nav-link" to="/poklon-bon">POKLON BON</Link>
+              </li>
+             
+
+              <li className="nav-item">
+                <Link className="nav-link" to="/blog">BLOG</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/kontakt">KONTAKT</a>
+                <Link className="nav-link" to="/kontakt">KONTAKT</Link>
               </li>
 
 

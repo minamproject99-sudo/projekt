@@ -3,16 +3,16 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
-          <section class="footer-top">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-7">
-            <p class="mb-0 px-md-5">
+          <section className="footer-top">
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-md-7">
+            <p className="mb-0 px-md-5">
               Ready to take the Electric Ivy or Ace for a spin? Electric test rides are now available in Amsterdam, Amstelveen, Abcoude, Bussum, Den Haag, Nijmegen, Weesp, Wormerveer, Berlin, Hamburg and Munich. Schedule your test ride now and we'll see you there.
             </p>
           </div>
-          <div class="col-md-5 text-center">
-            <a href="#" class="btn">Book now</a>
+          <div className="col-md-5 text-center">
+            <a href="#" className="btn">Book now</a>
           </div>
         </div>
       </div>

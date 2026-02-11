@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 
 import Naslovnica from "./pages/Naslovnica";
 import Blog from "./pages/Blog";
+import BlogSingle from "./pages/BlogSingle";
 import Profil from "./components/zadaci/Profil";
 import Aromaterapija from "./pages/Aromaterapija";
 import LjekovitiPripravci from "./pages/Ljekovitipripravci";
@@ -28,6 +29,7 @@ import Kontakt from "./pages/Kontakt";
 
 
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -37,6 +39,8 @@ function App() {
         <Route path="/" element={<Naslovnica />} />
         <Route path="/omeni" element={<Omeni />} />
         <Route path="/blog" element={<Blog />} />
+       <Route path="/blogsingle" element={<BlogSingle />} />
+       <Route path="/blog/:slug" element={<BlogSingle />} />
         <Route path="/profil" element={<Profil />} />
         <Route path="/aromaterapija" element={<Aromaterapija />} />
         <Route path="/ljekoviti-pripravci" element={<LjekovitiPripravci />} />
@@ -53,6 +57,7 @@ function App() {
         <Route path="/parcijalna-masaza" element={<ParcijalnaMasaza />} />
         <Route path="/masaza-cijelog-tijela" element={<CijeloTijelo />} />
         <Route path="/kontakt" element={<Kontakt />} />
+      
       </Routes>
 
       <Footer />
