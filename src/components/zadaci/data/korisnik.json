@@ -1,0 +1,13 @@
+{
+    "ime": "Marko",
+    "prezime": "Marković",
+    "godine": "28",
+    "vozacka": true,
+    "vjestine": ["Html", "Css", "JavaScript"],
+
+    "adresa": "Bulevar Kralja Aleksandra",
+        "broj": "73",
+        "grad": "Zagreb",
+        "pbroj": "10000"
+
+}
