@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 
 
-const Sportskamasaza = () => {
+
+const PocetnaVjezba = () => {
 
     const [page, setPage] = useState(null);
 
     useEffect(() => {
         const fetchPage = async () => {
             try {
-const response = await fetch('https://front2.edukacija.online/backend/wp-json/wp/v2/pages/1258?_embed');
+const response = await fetch('https://front2.edukacija.online/backend/wp-json/wp/v2/pages/703?_embed');
 if (!response.ok) {
 throw new Error('Greška pri dohvatu stranice');
 }
@@ -29,8 +30,13 @@ if (!page) {
 
 
   return (
+    <>
+   
    <div dangerouslySetInnerHTML={{__html:page.content.rendered}}/>
+   </>
   );
 };
 
-export default Sportskamasaza;
+export default PocetnaVjezba;
+
+ 

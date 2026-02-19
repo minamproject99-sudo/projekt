@@ -26,11 +26,11 @@ const Nav = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li className="nav-item">
-                <Link className="nav-link" to="/">NASLOVNICA</Link>
+                <Link className="nav-link" to="/">Naslovnica</Link>
               </li>
              
               <li className="nav-item">
-                <Link className="nav-link" to="/omeni">O MENI</Link>
+                <Link className="nav-link" to="/omeni">O meni</Link>
               </li>
               <li className="nav-item dropdown">
                 <Link
@@ -41,7 +41,7 @@ const Nav = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  MASAŽE
+                  Vrste Masaža
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="ddMasaze">
                   <li><Link className="dropdown-item" to="/klasicna-masaza">Klasična masaža</Link></li>
@@ -59,7 +59,7 @@ const Nav = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  AROMATERAPIJA
+                  Aromaterapija
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="ddAromaterapija">
                   <li><Link className="dropdown-item" to="/ljekoviti-pripravci">Ljekoviti pripravci</Link></li>
@@ -76,7 +76,7 @@ const Nav = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                 MEDITACIJE
+                 Meditacije
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="ddMeditacije">
                   <li><Link className="dropdown-item" to="/buddha-vipassana">Buddha Vipassana</Link></li>
@@ -85,15 +85,15 @@ const Nav = () => {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/poklon-bon">POKLON BON</Link>
+                <Link className="nav-link" to="/poklon-bon">Poklon Bon</Link>
               </li>
              
 
               <li className="nav-item">
-                <Link className="nav-link" to="/blog">BLOG</Link>
+                <Link className="nav-link" to="/pocetna-vjezba">Početna Vježba</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/kontakt">KONTAKT</Link>
+                <Link className="nav-link" to="/kontakt">Kontakt</Link>
               </li>
 
 

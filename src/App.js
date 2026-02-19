@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+// import 'animate.css';
 import "./App.css";
 
 import Nav from "./components/Nav";
@@ -25,6 +25,7 @@ import PoklonBon from "./pages/Poklonbon";
 import ParcijalnaMasaza from "./pages/Parcijalnamasaza";
 import CijeloTijelo from "./pages/Cijelotijelo";
 import Kontakt from "./pages/Kontakt";
+import PocetnaVjezba from "./pages/PocetnaVjezba";
 
 
 
@@ -57,6 +58,7 @@ function App() {
         <Route path="/parcijalna-masaza" element={<ParcijalnaMasaza />} />
         <Route path="/masaza-cijelog-tijela" element={<CijeloTijelo />} />
         <Route path="/kontakt" element={<Kontakt />} />
+        <Route path="/pocetna-vjezba" element={<PocetnaVjezba />} />
       
       </Routes>
 
