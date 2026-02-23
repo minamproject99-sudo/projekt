@@ -1,116 +1,128 @@
-// import {useState, useEffect} from "react";
+import React from "react";
+import './Naslovnica.css';
 
 const Naslovnica = () => {
-
   return (
-   <>
-
-      <section className="hero-h d-flex align-items-center mb-5">
-        <div className="container">
-        <h1 className="naslov-1 ms-3">Tvoje tijelo zaslužuje biti sretno i zdravo!</h1>
-        <p className="podnaslov">Pronađi balans kroz moć aromaterapije, iscjeljujući dodir masaže i duhovni rad koji te vraća sebi.</p>
+    <main className="happy-main">
+      
+      {/* 1. HERO SEKCIJA */}
+      <section className="hero-h" style={{ backgroundImage: `url('/img/hero-h.png')` }}>
+        <div className="hero-overlay"></div>
+        <div className="container hero-content">
+          <h1 className="naslov-1">Tvoje tijelo zaslužuje biti sretno i zdravo!</h1>
+          <p className="podnaslov">Pronađi balans kroz moć aromaterapije, iscjeljujući dodir masaže i duhovni rad koji te vraća sebi.</p>
         </div>
       </section>
 
-      <section className="home-1 py-5 mb-5">
+      {/* 2. USLUGE Z-LAYOUT (Crno / Zlatni tekst na svijetloj pozadini) */}
+      <section className="services py-5">
         <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <img src="img/home-1.jpg" alt="Naslovna slika prva" />
+          
+          {/* Klasična masaža */}
+          <div className="service-row">
+            <div className="service-img-wrapper">
+              <img src="/img/klasicna-masaza.png" alt="Klasična masaža" className="rounded-img" />
             </div>
-            <div className="col-md-6">
-              <div className="max-466 ms-md-auto my-4">
-                <h2 className="opacity-90">Bike plans for employees.</h2>
-                <p className="opacity-90 mt-3 mb-4">
-                  Veloretti Electrics benefit both the environment and the health of
-                  your employees. Oh, and they look good too. Cost-free for the
-                  employer and outside of the WKR.
-                </p>
-                <a href="#">Discover More</a>
-              </div>
+            <div className="service-text">
+              <h2>Klasična masaža: Snaga dodira za tvoju vitalnost.</h2>
+              <p>Osnova svakog wellness rituala. Klasičnom masažom dubinski obrađujemo mišićno tkivo, potičemo cirkulaciju i limfnu drenažu te oslobađamo tijelo nakupljenih toksina.</p>
+              <p className="benefit"><strong>Benefit:</strong> Poboljšana cirkulacija, smanjena bol u mišićima i osjećaj potpune regeneracije.</p>
+              <a href="/klasicna-masaza" className="link-saznaj-vise">Saznaj više o klasičnoj masaži &rarr;</a>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section className="home-2 d-flex align-items-center text-white mb-5">
-        <div className="container">
-          <div className="col-md-6">
-            <div className="max-466 ms-md-auto my-5">
-              <h2 className="opacity-90">Service, maintenance and insurance</h2>
-              <p className="opacity-90 mt-3 mb-4">
-                The lease includes an all-in service package. Throughout the entire
-                36 months, you are fully insured against damage, theft and
-                maintenance. In addition, you always have access to roadside assistance.
-              </p>
+          {/* Relax Aromaterapija (Obrnuti redoslijed - Z layout) */}
+          <div className="service-row reverse">
+            <div className="service-img-wrapper">
+              <img src="/img/relax.png" alt="Relax masaža" className="rounded-img" />
+            </div>
+            <div className="service-text">
+              <h2>Relax aromaterapija: Putovanje kroz osjetila.</h2>
+              <p>Više od masaže – ovo je holističko iskustvo koje spaja nježnost dugih, tečnih pokreta i moćnu energiju eteričnih ulja. Svako ulje biramo intuitivno, prema tvojim trenutačnim potrebama.</p>
+              <p className="benefit"><strong>Benefit:</strong> Duboka relaksacija uma, otpuštanje stresa i emocionalna ravnoteža.</p>
+              <a href="/relax-masaza" className="link-saznaj-vise">Saznaj više o relax masaži &rarr;</a>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section className="home-3 py-5 mb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <img src="img/home-3.jpg" alt="Naslovna slika treca" />
+          {/* Sportska masaža */}
+          <div className="service-row">
+            <div className="service-img-wrapper">
+              <img src="/img/sportska-3.png" alt="Sportska masaža" className="rounded-img" />
             </div>
-            <div className="col-md-6">
-              <div className="max-466 ms-md-auto my-4">
-                <h2 className="opacity-90">Free of charge for employers.</h2>
-                <p className="opacity-90 mt-3 mb-4">
-                  The bike plan is totally independent of the WKR and is free for you as
-                  an employer. The employee pays the lease costs and you, as the
-                  employer, decide whether you want to contribute to the costs.
-                </p>
-                <a href="#">Cost example</a>
-              </div>
+            <div className="service-text">
+              <h2>Sportska masaža: Tvoj saveznik u pokretu.</h2>
+              <p>Dinamičan i intenzivan tretman namijenjen onima koji traže brzi oporavak. Fokusiramo se na specifične mišićne skupine izložene naporu, koristeći snažnije tehnike koje razbijaju "čvorove".</p>
+              <p className="benefit"><strong>Benefit:</strong> Brži oporavak mišića, veća fleksibilnost i prevencija sportskih ozljeda.</p>
+              <a href="/sportska-masaza" className="link-saznaj-vise">Saznaj više o sportskoj masaži &rarr;</a>
             </div>
           </div>
+
         </div>
       </section>
 
-      <section className="home-4 py-5 mb-5">
+      {/* 3. AROMATERAPIJA & POZIV (Tamna pozadina, Z-layout) */}
+      <section className="aroma-kontakt py-5">
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-6 order-md-2">
-              <img src="img/home-4.jpg" alt="Naslovna slika cetvrta" />
+          
+          {/* Uvod u aromaterapiju */}
+          <div className="aroma-content text-center mb-5">
+            <h2 className="zlatni-naslov">Priroda u bočici: Ručno rađeni ljekoviti pripravci</h2>
+            <p className="aroma-opis">Moja strast prema biljkama pretočena je u male serije proizvoda koji poštuju ritam prirode i potrebe tvog tijela. Svaka krema, ulje i macerat nastali su s namjerom da podrže tvoje zdravlje na najnježniji način – direktno iz prirode u tvoj dom.</p>
+          </div>
+
+          {/* Ljekovite kreme (Slika lijevo, tekst desno) */}
+          <div className="service-row aroma-row">
+            <div className="service-img-wrapper">
+              <img src="/img/kreme.png" alt="Ljekovite kreme i melemi" className="rounded-img" />
             </div>
-            <div className="col-md-6">
-              <div className="max-466 ms-md-auto my-4">
-                <h2 className="opacity-90">How it works.</h2>
-                <ul className="opacity-90 mt-3 mb-4">
-                  <li>
-                    <h3 className="list-item">Register your company</h3>
-                    <p className="opacity-50 mt-3 mb-4">
-                      Fill in our registration form with your company details. After
-                      your registration, our leasing partner will do a credit check.
-                    </p>
-                    <h3 className="list-item">Determine the requirements</h3>
-                    <p className="opacity-50 mt-3 mb-4">
-                      You get access to the digital platform. Set the requirements.
-                    </p>
-                    <h3 className="list-item">Ride your bike!</h3>
-                    <p className="opacity-50 mt-3 mb-4">
-                      Let's go! Your employees can choose their bikes.
-                    </p>
-                    <h3 className="list-item">Administration</h3>
-                    <p className="opacity-50 mt-3 mb-4">
-                      Everything in one place. Digital platform gives you an easy overview.
-                    </p>
-                  </li>
-                </ul>
-              </div>
+            <div className="service-text text-start">
+              <h2>Ljekovite kreme i melemi</h2>
+              <p>Bogate teksture na bazi pčelinjeg voska i bilja, stvorene za dubinsku njegu i umirenje kože. Nježno hrane kožu, vraćaju joj elastičnost i štite ju od vanjskih utjecaja.</p>
             </div>
           </div>
+
+          {/* Aromaterapijska ulja (Tekst lijevo, slika desno - Reverse) */}
+          <div className="service-row reverse aroma-row">
+            <div className="service-img-wrapper">
+              <img src="/img/ulja.webp" alt="Aromaterapijska ulja" className="rounded-img" />
+            </div>
+            <div className="service-text text-start">
+              <h2>Aromaterapijska ulja</h2>
+              <p>Pažljivo birane mješavine koje uravnotežuju duh i opuštaju tijelo. Svaka kapljica nosi esenciju čistog ljekovitog bilja koja djeluje opuštajuće na živčani sustav.</p>
+            </div>
+          </div>
+
+          {/* Macerati (Slika lijevo, tekst desno) */}
+          <div className="service-row aroma-row">
+            <div className="service-img-wrapper">
+              <img src="/img/macerati.png" alt="Macerati" className="rounded-img" />
+            </div>
+            <div className="service-text text-start">
+              <h2>Macerati (Biljna ulja)</h2>
+              <p>Čista snaga sunca i bilja (poput nevena, gospine trave i lavande) za najprirodniju njegu lica i tijela. Stara tradicija sačuvana u svakoj bočici za dubinsku regeneraciju.</p>
+            </div>
+          </div>
+
+          {/* Link Saznaj Više i Call Box */}
+          <div className="text-center mt-5">
+            <a href="/aromaterapija" className="link-saznaj-vise svijetlo">Saznaj više o svim ljekovitim pripravcima &rarr;</a>
+
+            <div className="call-box mt-5">
+              <h3>Čujemo se? Volim osobni pristup.</h3>
+              <p>Budući da su moji pripravci rađeni u malim serijama i često su sezonski, najviše volim kad se čujemo direktno. Tako ti mogu najbolje savjetovati koji bi pripravak najbolje odgovarao tvojim trenutnim potrebama.</p>
+              <a href="tel:+385976065629" className="btn-primary mt-4">NAZOVI ZA SAVJET I NARUDŽBU</a>
+            </div>
+          </div>
+
         </div>
       </section>
 
+      {/* 4. STICKY WHATSAPP CTA */}
+      <a href="https://wa.me/385976065629?text=Zdravo!%20Zanima%20me%20masaža%20ili%20pripravak." className="whatsapp-float" target="_blank" rel="noreferrer">
+        <i className="fab fa-whatsapp"></i>
+      </a>
 
-
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </>
+    </main>
   );
 };
 

@@ -1,0 +1,270 @@
+/* ================================
+   OSNOVNE BOJE I POSTAVKE
+=================================== */
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #FAFAFA; /* Topla bijela */
+  color: #1A1A1A; /* Antracit crna za čitljivost */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.py-5 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* ================================
+   HERO SEKCIJA
+=================================== */
+.hero-h {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  display: flex;
+  align-items: center; 
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(26,26,26,0.8) 0%, rgba(26,26,26,0.5) 50%, rgba(197,160,89,0.3) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-h .naslov-1 {
+  color: #C5A059; /* Tvoja Zlatna */
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero-h .podnaslov {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* ================================
+   USLUGE & AROMATERAPIJA (UNIFORMNI Z-LAYOUT)
+=================================== */
+
+.service-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Vertikalno centrira sliku i tekst */
+  gap: 60px; /* 100% isti razmak između svake slike i njenog teksta */
+  margin-bottom: 100px; /* Ista margina ispod svakog bloka */
+}
+
+/* Obrnuti red za Z-layout */
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Striktno pravilo: Slika i tekst uzimaju točno pola ekrana */
+.service-img-wrapper, 
+.service-text {
+  flex: 1 1 calc(50% - 30px); /* 50% širine minus pola razmaka (gap) */
+  min-width: 320px;
+}
+
+/* ================================
+   PRAVILO ZA SVE SLIKE (Masaže i Kreme)
+=================================== */
+.service-img-wrapper img {
+  width: 100%;
+  height: 400px; /* FIKSNA VISINA ZA APSOLUTNO SVE SLIKE */
+  object-fit: cover; /* Magija: Slika se savršeno ispunjava bez rastezanja i spljoštavanja */
+  border-radius: 12px; /* Isti mekani rubovi */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1); /* Ista elegantna sjena */
+  display: block; /* Uklanja sitni razmak ispod slike */
+}
+
+/* Tekst - poravnanje i dišni prostor */
+.service-text {
+  padding: 10px 0;
+}
+
+.service-text h2 {
+  color: #C5A059; /* Zlatni naslovi */
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.service-text p {
+  font-size: 1.1rem;
+  color: #333333; 
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Okvirić za "Benefit" ispod masaža */
+.service-text .benefit {
+  color: #1A1A1A; 
+  background-color: #F0EDE5; 
+  padding: 15px 20px;
+  border-left: 4px solid #C5A059;
+  font-style: italic;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ================================
+   RESPONSIVE (MOBITELI I TABLETI)
+=================================== */
+@media (max-width: 900px) {
+  .service-row {
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  
+  /* Na mobitelima Z-layout se ukida, SLIKA UVIJEK IDE PRVA iznad teksta */
+  .service-row, 
+  .service-row.reverse {
+    flex-direction: column;
+    text-align: center; /* Centrira tekst na mobitelima */
+  }
+
+  .service-img-wrapper, 
+  .service-text {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .service-img-wrapper img {
+    height: 350px; /* Na mobitelu su sve slike visoke točno 350px */
+  }
+
+  .service-text .benefit {
+    text-align: left; /* Benefit ostaje lijevo poravnat radi čitljivosti */
+  }
+}
+
+/* ================================
+   AROMATERAPIJA & KONTAKT
+=================================== */
+.aroma-kontakt {
+  background-color: #1A1A1A; /* Tamni dio iz Veloretti inspiracije */
+  color: #FFFFFF;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.zlatni-naslov {
+  color: #C5A059;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.aroma-opis {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  opacity: 0.9;
+}
+
+.aroma-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.aroma-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.aroma-item h4 {
+  color: #C5A059;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.call-box {
+  background-color: #C5A059; /* Zlatna pozadina za CTA */
+  color: #1A1A1A; /* Crni tekst na zlatnom */
+  padding: 50px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.call-box h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+  padding: 15px 35px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   WHATSAPP GUMB
+=================================== */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  /* background-color: #25d366; */
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Prilagodba teksta za Z-layout na tamnoj pozadini (Aromaterapija) */
+.aroma-row .service-text p {
+  color: #E0E0E0; /* Svijetlo siva/bijela umjesto tamne */
+}
+
+.text-start {
+  text-align: left;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
