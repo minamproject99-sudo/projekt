@@ -3,6 +3,7 @@ import './Naslovnica.css';
 
 const Naslovnica = () => {
   return (
+    
     <main className="happy-main">
       
       {/* 1. HERO SEKCIJA */}
@@ -73,7 +74,7 @@ const Naslovnica = () => {
           {/* Ljekovite kreme (Slika lijevo, tekst desno) */}
           <div className="service-row aroma-row">
             <div className="service-img-wrapper">
-              <img src="/img/kreme.png" alt="Ljekovite kreme i melemi" className="rounded-img" />
+              <img src="/img/krema-1.png" alt="Ljekovite kreme i melemi" className="rounded-img" />
             </div>
             <div className="service-text text-start">
               <h2>Ljekovite kreme i melemi</h2>
@@ -84,7 +85,7 @@ const Naslovnica = () => {
           {/* Aromaterapijska ulja (Tekst lijevo, slika desno - Reverse) */}
           <div className="service-row reverse aroma-row">
             <div className="service-img-wrapper">
-              <img src="/img/ulja.webp" alt="Aromaterapijska ulja" className="rounded-img" />
+              <img src="/img/ulja-2.png" alt="Aromaterapijska ulja" className="rounded-img" />
             </div>
             <div className="service-text text-start">
               <h2>Aromaterapijska ulja</h2>
@@ -95,7 +96,7 @@ const Naslovnica = () => {
           {/* Macerati (Slika lijevo, tekst desno) */}
           <div className="service-row aroma-row">
             <div className="service-img-wrapper">
-              <img src="/img/macerati.png" alt="Macerati" className="rounded-img" />
+              <img src="/img/ulja-1.png" alt="Macerati" className="rounded-img" />
             </div>
             <div className="service-text text-start">
               <h2>Macerati (Biljna ulja)</h2>

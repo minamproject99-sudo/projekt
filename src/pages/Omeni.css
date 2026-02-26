@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* ================================
+   OSNOVNE POSTAVKE STRANICE
+=================================== */
+body {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #1A1A1A; /* Tamna Veloretti crna umjesto stare #220b04 */
+    background-color: #FAFAFA; /* Topla bijela (luksuznije od čistog f8f9fa) */
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.omeni-page {
+    padding-top: 140px; /* Prostor zbog fixed navigacije */
+    padding-bottom: 100px;
+    min-height: 100vh;
+}
+
+.bg-light {
+    background-color: transparent !important; /* Mičemo bootstrap sivilo */
+}
+
+.py-5 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+
+/* ================================
+   ZAGLAVLJE I NASLOVI
+=================================== */
+.page-header {
+    margin-bottom: 50px;
+}
+
+.naslov-1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1.2;
+    font-weight: 700;
+    color: #C5A059; /* Tvoja luksuzna zlatna umjesto #311616 */
+    margin-bottom: 15px;
+}
+
+.podnaslov-tamni {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #4A4A4A;
+    letter-spacing: 1px;
+}
+
+h2 {
+    line-height: 1.3;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+a {
+    color: #C5A059; /* Zlatni linkovi umjesto plavih #141651 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1A1A1A;
+}
+
+/* ================================
+   ISTAKNUTA SLIKA (Featured Image)
+=================================== */
+.featured-image-wrapper {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.premium-featured-image {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 8px; /* Mekaniji rubovi */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); /* Elegantna duboka sjena */
+    display: block;
+}
+
+/* ================================
+   WORDPRESS SADRŽAJ (LUKSUZNI TEKST)
+=================================== */
+.o-meni-wp-content {
+    max-width: 900px; /* Uži blok teksta = lakše čitanje i bolji dizajn */
+    margin: 0 auto;
+}
+
+/* Stil za paragrafe (priče O meni) */
+.o-meni-wp-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #333333; /* Tamno siva je ugodnija oku od crne */
+    margin-bottom: 1.8rem;
+    font-weight: 400;
+}
+
+/* Podnaslovi unutar teksta */
+.o-meni-wp-content h2,
+.o-meni-wp-content h3,
+.o-meni-wp-content h4 {
+    color: #1A1A1A;
+    font-weight: 700;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Zlatna crta ispod podnaslova */
+.o-meni-wp-content h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #C5A059; /* Zlatna */
+}
+
+/* Slike bačene unutar WP editora */
+.o-meni-wp-content img,
+.o-meni-wp-content .wp-block-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin: 2rem 0;
+    height: auto;
+}
+
+/* ================================
+   CITATI (Blockquote iz Gutenberga)
+=================================== */
+.o-meni-wp-content blockquote,
+.o-meni-wp-content .wp-block-quote {
+    background-color: #1A1A1A; /* Tamna podloga */
+    padding: 40px;
+    border-radius: 8px;
+    border-left: 6px solid #C5A059; /* Zlatni rub */
+    margin: 4rem 0;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.o-meni-wp-content blockquote p {
+    color: #FFFFFF !important;
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-bottom: 0;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* ================================
+   KOLUMNE I GALERIJE (Z-layout unutar WP-a)
+=================================== */
+.o-meni-wp-content .wp-block-columns {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* ================================
+   RESPONZIVNOST I POMOĆNE KLASE
+=================================== */
+.opacity-90 {
+    opacity: 0.9;
+}
+
+.max-466 {
+    max-width: 466px;
+}
+
+@media (min-width: 1200px) {
+    .h1, h1 { font-size: 4rem; }
+    .h2, h2 { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .omeni-page {
+        padding-top: 100px;
+    }
+    
+    .o-meni-wp-content .wp-block-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .page-header h1.naslov-1 {
+        font-size: 2.5rem;
+    }
+}
+/* ================================
+   LUKSUZNI KONTAKT GUMB NA DNU
+=================================== */
+.premium-contact-section {
+    margin-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    border-top: 1px solid rgba(197, 160, 89, 0.2); /* Nježna zlatna linija koja odvaja tekst od gumba */
+}
+
+.contact-heading {
+    font-size: 2rem;
+    color: #FFFFFF;
+    font-weight: 300;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.btn-premium-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #1A1A1A; /* Tamna podloga */
+    color: #C5A059 !important; /* Zlatni tekst */
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 2px; /* Razmaknuta slova za premium dojam */
+    padding: 20px 50px;
+    border: 1px solid #C5A059;
+    border-radius: 50px; /* Zaobljeni rubovi */
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-premium-gold i {
+    font-size: 1.4rem; /* Ikonica WhatsAppa malo veća od teksta */
+}
+
+/* Hover efekt (Lebdenje mišem) - Ispuni se zlatnom bojom i blago zasvijetli */
+.btn-premium-gold:hover {
+    background-color: #C5A059;
+    color: #1A1A1A !important;
+    transform: translateY(-5px); /* Gumb se lagano podigne */
+    box-shadow: 0 15px 30px rgba(197, 160, 89, 0.4); /* Zlatni sjaj */
+}
+
+/* Uklanjanje WP gumba ako ga nisi obrisala u editoru */
+.o-meni-wp-content .wp-block-button,
+.o-meni-wp-content .wp-block-buttons {
+    display: none !important; 
+}
+/* CTA Sekcija */
+.omeni-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 2rem 6rem;
+  gap: 1.5rem;
+}
+
+.omeni-cta-uvod {
+  font-size: 1.05rem;
+  color: #E0E0E0;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  max-width: 520px;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.omeni-cta-gumb {
+  display: inline-block;
+  padding: 1rem 3rem;
+  border: 1px solid #C5A059;
+  color: #C5A059;
+  background: transparent;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.omeni-cta-gumb:hover {
+  background: #C5A059;
+  color: #1A1A1A;
+  box-shadow: 0 0 30px rgba(197, 160, 89, 0.3);
+  transform: translateY(-2px);
+}
+
+.omeni-cta-mikro {
+  font-size: 0.82rem;
+  color: #888;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: -0.5rem;
+}
