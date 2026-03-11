@@ -56,9 +56,9 @@ const Footer = () => {
         <ul>
           <li>📍 Pula, Verudela 8</li>
           <li>📞 <a href="tel:+385976065629">+385 97 606 5629</a></li>
-          <li>🕒 Pon-Pet: 09:00–20:00</li>
-          <li>🕒 Sub: 09:00–14:00</li>
-          <li>Nedjeljom i blagdanima zatvoreno</li>
+          <li>🕒 Pon-Pet: 08:00-16:00</li>
+          <li>🕒 Sub: 08:00-12:00</li>
+          <li>Nedjeljom i praznicima zatvoreno</li>
         </ul>
       </div>
       
@@ -68,7 +68,7 @@ const Footer = () => {
         <div class="social-links">
           <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+          {/* <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a> */}
         </div>
       </div>
       

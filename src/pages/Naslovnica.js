@@ -15,14 +15,14 @@ const Naslovnica = () => {
         </div>
       </section>
 
-      {/* 2. USLUGE Z-LAYOUT (Crno / Zlatni tekst na svijetloj pozadini) */}
+      {/* 2. USLUGE Z-LAYOUT (Tamna pozadina sa zlatnim luksuznim detaljima) */}
       <section className="services py-5">
         <div className="container">
           
           {/* Klasična masaža */}
           <div className="service-row">
             <div className="service-img-wrapper">
-              <img src="/img/klasicna-masaza.png" alt="Klasična masaža" className="rounded-img" />
+              <img src="/img/klasicna-1.png" alt="Klasična masaža" className="rounded-img" />
             </div>
             <div className="service-text">
               <h2>Klasična masaža: Snaga dodira za tvoju vitalnost.</h2>
@@ -48,7 +48,7 @@ const Naslovnica = () => {
           {/* Sportska masaža */}
           <div className="service-row">
             <div className="service-img-wrapper">
-              <img src="/img/sportska-3.png" alt="Sportska masaža" className="rounded-img" />
+              <img src="/img/sportska.png" alt="Sportska masaža" className="rounded-img" />
             </div>
             <div className="service-text">
               <h2>Sportska masaža: Tvoj saveznik u pokretu.</h2>
@@ -61,7 +61,7 @@ const Naslovnica = () => {
         </div>
       </section>
 
-      {/* 3. AROMATERAPIJA & POZIV (Tamna pozadina, Z-layout) */}
+      {/* 3. AROMATERAPIJA & POZIV (Identifikator Z-layouta kao kod masaža) */}
       <section className="aroma-kontakt py-5">
         <div className="container">
           
@@ -72,42 +72,46 @@ const Naslovnica = () => {
           </div>
 
           {/* Ljekovite kreme (Slika lijevo, tekst desno) */}
-          <div className="service-row aroma-row">
+          <div className="service-row">
             <div className="service-img-wrapper">
               <img src="/img/krema-1.png" alt="Ljekovite kreme i melemi" className="rounded-img" />
             </div>
-            <div className="service-text text-start">
+            <div className="service-text">
               <h2>Ljekovite kreme i melemi</h2>
               <p>Bogate teksture na bazi pčelinjeg voska i bilja, stvorene za dubinsku njegu i umirenje kože. Nježno hrane kožu, vraćaju joj elastičnost i štite ju od vanjskih utjecaja.</p>
+              <p className="benefit"><strong>Benefit:</strong> Dubinska njega, umirenje iritacija i zaštita kože od isušivanja.</p>
+              <a href="/aromaterapija" className="link-saznaj-vise">Saznaj više o kremama &rarr;</a>
             </div>
           </div>
 
-          {/* Aromaterapijska ulja (Tekst lijevo, slika desno - Reverse) */}
-          <div className="service-row reverse aroma-row">
+          {/* Aromaterapijska ulja (Obrnuti redoslijed - Z layout) */}
+          <div className="service-row reverse">
             <div className="service-img-wrapper">
               <img src="/img/ulja-2.png" alt="Aromaterapijska ulja" className="rounded-img" />
             </div>
-            <div className="service-text text-start">
+            <div className="service-text">
               <h2>Aromaterapijska ulja</h2>
               <p>Pažljivo birane mješavine koje uravnotežuju duh i opuštaju tijelo. Svaka kapljica nosi esenciju čistog ljekovitog bilja koja djeluje opuštajuće na živčani sustav.</p>
+              <p className="benefit"><strong>Benefit:</strong> Otpuštanje stresa, bolji san i podizanje energije.</p>
+              <a href="/aromaterapija" className="link-saznaj-vise">Saznaj više o uljima &rarr;</a>
             </div>
           </div>
 
           {/* Macerati (Slika lijevo, tekst desno) */}
-          <div className="service-row aroma-row">
+          <div className="service-row">
             <div className="service-img-wrapper">
               <img src="/img/ulja-1.png" alt="Macerati" className="rounded-img" />
             </div>
-            <div className="service-text text-start">
+            <div className="service-text">
               <h2>Macerati (Biljna ulja)</h2>
               <p>Čista snaga sunca i bilja (poput nevena, gospine trave i lavande) za najprirodniju njegu lica i tijela. Stara tradicija sačuvana u svakoj bočici za dubinsku regeneraciju.</p>
+              <p className="benefit"><strong>Benefit:</strong> Prirodna obnova oštećene kože i smirenje upalnih procesa.</p>
+              <a href="/aromaterapija" className="link-saznaj-vise">Saznaj više o maceratima &rarr;</a>
             </div>
           </div>
 
-          {/* Link Saznaj Više i Call Box */}
+          {/* Call Box ostaje nepromijenjen ispod */}
           <div className="text-center mt-5">
-            <a href="/aromaterapija" className="link-saznaj-vise svijetlo">Saznaj više o svim ljekovitim pripravcima &rarr;</a>
-
             <div className="call-box mt-5">
               <h3>Čujemo se? Volim osobni pristup.</h3>
               <p>Budući da su moji pripravci rađeni u malim serijama i često su sezonski, najviše volim kad se čujemo direktno. Tako ti mogu najbolje savjetovati koji bi pripravak najbolje odgovarao tvojim trenutnim potrebama.</p>
@@ -117,6 +121,7 @@ const Naslovnica = () => {
 
         </div>
       </section>
+
 
       {/* 4. STICKY WHATSAPP CTA */}
       <a href="https://wa.me/385976065629?text=Zdravo!%20Zanima%20me%20masaža%20ili%20pripravak." className="whatsapp-float" target="_blank" rel="noreferrer">

@@ -83,16 +83,18 @@ const RelaxMasaza = () => {
           </section>
 
 
-          {/* 3. KONTAKT GUMB - Prilagođen za direktan telefonski poziv */}
+           {/* 3. KONTAKT GUMB
           <div className="premium-contact-section text-center">
-            <h3 className="contact-heading" style={{ fontSize: '1.8rem' }}><br/>Rezerviraj termin za svoju dozu mira.</h3>
+            <h3 className="contact-heading">Rezerviraj termin za svoju dozu mira.</h3>
             <a
-              href="tel:+385976065629"
+              href="https://wa.me/385976065629?text=Pozdrav!%20Želim%20rezervirati%20termin%20za%20klasičnu%20masažu."
               className="btn-premium-gold"
+              target="_blank"
+              rel="noreferrer"
             >
-              <i className="fas fa-phone-alt"></i> NAZOVI ZA TERMIN
+              <i className="fab fa-whatsapp"></i> REZERVIRAJ TERMIN
             </a>
-          </div>
+          </div>  */}
 
           {/* 4. STICKY WHATSAPP */}
           <a

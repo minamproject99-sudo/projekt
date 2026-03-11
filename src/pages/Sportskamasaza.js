@@ -95,7 +95,7 @@ const SportskaMasaza = () => {
             </div>
           </section>
 
-          {/* 3. KONTAKT GUMB - Prilagođen za direktan telefonski poziv */}
+          {/* 3. KONTAKT GUMB - Prilagođen za direktan telefonski poziv
           <div className="premium-contact-section text-center">
             <h3 className="contact-heading" style={{ fontSize: '1.8rem' }}>Ne dopusti da te bol zaustavi.<br/>Vratimo tvoje tijelo u puni pogon!</h3>
             <a
@@ -104,7 +104,7 @@ const SportskaMasaza = () => {
             >
               <i className="fas fa-phone-alt"></i> NAZOVI ZA TERMIN
             </a>
-          </div>
+          </div> */}
 
           {/* 4. STICKY WHATSAPP - Ostavljamo ga kao sekundarnu opciju */}
           <a

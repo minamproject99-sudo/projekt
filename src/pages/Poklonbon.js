@@ -1,80 +1,79 @@
-import { useEffect, useState } from "react";
-import Loader from "../components/Loader";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './PoklonBon.css';
 
 const PoklonBon = () => {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true); // Postavimo odmah na true da ne bljesne prazno
-
-  useEffect(() => {
-    fetch("https://front2.edukacija.online/backend/wp-json/wp/v2/pages/1170?_embed")
-      .then((response) => response.json())
-      .then((data) => {
-        // Provjeravamo je li API vratio grešku ili podatke
-        if (data.id) {
-          setPosts([data]); // Spremanje objekta u niz
-        } else {
-          console.log("Nema podataka ili greška:", data);
-        }
-      })
-      .catch((error) => console.error("Greška pri dohvatu:", error))
-      .finally(() => setLoading(false));
-  }, []);
-
   return (
-    <>
-      {loading && <Loader />}
+    <div className="poklon-page">
       
-      <div className="bon-page">
-        <div className="container-bon">
-          
-          
-          <div className="row justify-content-center"> {/* Centriranje sadržaja */}
-            {posts?.map((page) => {
-              // 1. DOHVAĆANJE SLIKE - Robusnija metoda
-              const media = page._embedded?.["wp:featuredmedia"]?.[0];
-              // Pokušaj naći sliku: Prvo probaj direktni URL, pa 'full', pa 'large'
-              const image = media?.source_url || 
-                            media?.media_details?.sizes?.full?.source_url || 
-                            media?.media_details?.sizes?.large?.source_url;
-
-              return (
-                <div key={page.id} className="col-md-8 mb-4 blog-post">
-                  
-                  {/* Prikaz slike samo ako postoji URL */}
-                  {image ? (
-                    <img
-                      src={image}
-                      className="img-fluid mb-4 rounded" // Dodao sam img-fluid za responzivnost
-                      alt={page.title.rendered}
-                      style={{ width: "100%", height: "auto" }} // Osiguranje da slika ne pobjegne
-                    />
-                  ) : (
-                    // Opcionalno: Debug poruka ako slike nema (obrišite kasnije)
-                    // <p style={{color: 'red'}}>Slika nije pronađena u API-ju.</p>
-                    null)}
-
-                  <h2>{page.title.rendered}</h2>
-
-                  {/* Koristimo 'content' za puni tekst stranice, 'excerpt' je samo sažetak */}
-                  <div
-                    className="content-body"
-                    dangerouslySetInnerHTML={{ __html: page.content.rendered }}
-                  />
-
-                  <hr />
-
-                </div>
-              );
-            })}
-          </div>
+      {/* --- HERO NASLOVNA SEKCIJA --- */}
+      <div 
+        className="bon-naslovna" 
+        style={{ backgroundImage: "url('/img/bon-naslovna.jpg')" }}
+      >
+        <div className="hero-overlay">
+          <h1>Poklon Bon</h1>
+          <p className="hero-podnaslov">Daruj trenutke potpunog opuštanja</p>
         </div>
       </div>
-    </>
+
+      {/* --- SADRŽAJ (Sekcije) --- */}
+      <div className="bon-content">
+        
+        {/* 1. SEKCIJA: Slika lijevo, Tekst desno */}
+        <div className="bon-sekcija">
+          <div className="bon-slika-wrapper">
+            <img 
+              src="/img/bon-masaza.jpeg" 
+              alt="Poklon bon masaža" 
+              className="bon-img" 
+            />
+          </div>
+          
+          <div className="bon-tekst">
+            <h2>Daruj slobodu izbora i potpuni mir</h2>
+            <p>
+              Poklon bon možeš kreirati točno onako kako želiš – odaberi specifičan 
+              tretman kojim želiš nekoga razveseliti ili odredi iznos (budžet), a 
+              osobi kojoj daruješ prepusti slatku brigu biranja idealne masaže i trajanja.
+            </p>
+            <Link to="/kontakt" className="btn-premium-gold">
+              Kupi Poklon Bon
+            </Link>
+          </div>
+        </div>
+
+        {/* 2. SEKCIJA: Tekst lijevo, Slika desno (Obrnuti raspored) */}
+        <div className="bon-sekcija reverse">
+          <div className="bon-tekst">
+            <h2>Kako do bona?</h2>
+            <p>Neka darivanje bude jednostavno i bez stresa:</p>
+            
+            <ul className="premium-lista">
+              <li><strong>Digitalna dostava:</strong> Bon možemo poslati e-mailom izravno tebi ili osobi koju želiš iznenaditi – idealno za poklone u zadnji tren.</li>
+              <li><strong>Osobni dolazak:</strong> Ako više voliš fizički oblik, svrati osobno u salon i preuzmi svoj bon.</li>
+              <li><strong>Jednostavno plaćanje:</strong> Uplatu možeš izvršiti brzo i lako na žiro račun ili gotovinom prilikom dolaska.</li>
+              <li><strong>Podrška:</strong> Nazovi me i pružit ću ti sve informacije potrebne.</li>
+            </ul>
+
+            <Link to="/kontakt" className="btn-premium-gold">
+              Kupi Poklon Bon
+            </Link>
+          </div>
+          
+          <div className="bon-slika-wrapper">
+            <img 
+              src="/img/bon-aromaterapija.jpeg" 
+              alt="Poklon bon aromaterapija" 
+              className="bon-img" 
+            />
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   );
 };
 
 export default PoklonBon;
-
-
-
-

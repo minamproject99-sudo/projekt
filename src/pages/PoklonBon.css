@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Quicksand:wght@300;400;500;600&display=swap');
+
+.poklon-page {
+  background-color: #1A1A1A; /* Tamna tema */
+  color: #E8E8E8;
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  /* Uklonili smo globalni padding kako bi hero slika išla do samog vrha ekrana! */
+}
+
+/* --- HERO SEKCIJA --- */
+.bon-naslovna {
+  width: 100%;
+  height: 60vh; /* Zauzima 60% visine ekrana */
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Divan gradijent: na vrhu malo proziran, na dnu potpuno prelazi u našu boju #1A1A1A */
+  background: linear-gradient(to bottom, rgba(26, 26, 26, 0.2) 0%, rgba(26, 26, 26, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Spušta tekst prema donjem dijelu slike */
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-family: 'Quicksand', serif;
+  color: #C5A059;
+  font-size: 3.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+
+.hero-podnaslov {
+  color: #E8E8E8;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+/* --- SADRŽAJ (DVJE SEKCIJE ISPOD) --- */
+.bon-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+  padding: 60px 20px 100px 20px; /* Vraćamo padding za ove sekcije */
+}
+
+/* Osnovni raspored za sekcije */
+.bon-sekcija {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  gap: 60px;
+}
+
+.bon-sekcija.reverse {
+  flex-direction: row-reverse;
+}
+
+.bon-slika-wrapper {
+  flex: 1;
+}
+
+.bon-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  object-fit: cover;
+}
+
+.bon-tekst {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.bon-tekst h2 {
+  font-family: 'Quicksand', serif;
+  color: #C5A059;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.bon-tekst p {
+  font-size: 1.1rem;
+  color: #B0B0B0;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+/* Stilizacija liste "Kako do bona?" */
+.premium-lista {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.premium-lista li {
+  font-size: 1.05rem;
+  color: #B0B0B0;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.premium-lista li::before {
+  content: '✦'; 
+  color: #C5A059;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+.premium-lista li strong {
+  color: #E8E8E8;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Gumb za kupnju */
+.btn-premium-gold {
+  display: inline-block;
+  padding: 16px 40px;
+  color: #1A1A1A;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(197, 160, 89, 0.15);
+}
+
+.btn-premium-gold:hover {
+  background-color: #dfb96e;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(197, 160, 89, 0.3);
+  color: #1A1A1A;
+}
+
+/* Responzivnost */
+@media (max-width: 768px) {
+  .hero-bon {
+    height: 50vh;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .bon-sekcija, 
+  .bon-sekcija.reverse {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .bon-tekst {
+    align-items: center;
+  }
+
+  .premium-lista li {
+    text-align: left;
+  }
+
+  .bon-tekst h2 {
+    font-size: 2.1rem;
+  }
+  
+  .bon-content {
+    padding: 20px 20px 60px 20px;
+    gap: 80px;
+  }
+}

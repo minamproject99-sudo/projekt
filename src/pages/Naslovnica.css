@@ -1,10 +1,25 @@
 /* ================================
    OSNOVNE BOJE I POSTAVKE
 =================================== */
+/* OVO GARANTIRA TAMNU BOJU BEZ OBZIRA NA GLOBALNI CSS */
+.happy-main {
+  background-color: #242424 !important; 
+  color: #E0E0E0 !important;
+  min-height: 100vh;
+  width: 100%;
+  display: block;
+}
+
+/* Forsiramo pozadinu i za sekcije unutar naslovnice */
+.happy-main section {
+  background-color: transparent !important;
+}
+
+
 body {
   font-family: 'Quicksand', sans-serif;
-  background-color: #FAFAFA; /* Topla bijela */
-  color: #1A1A1A; /* Antracit crna za čitljivost */
+  background-color: #121212; /* Tamna luksuzna pozadina */
+  color: #E0E0E0; /* Svijetli tekst za čitljivost na tamnom */
   margin: 0;
   padding: 0;
 }
@@ -36,7 +51,7 @@ body {
 .hero-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(135deg, rgba(26,26,26,0.8) 0%, rgba(26,26,26,0.5) 50%, rgba(197,160,89,0.3) 100%);
+  background: linear-gradient(135deg, rgba(18,18,18,0.9) 0%, rgba(18,18,18,0.6) 50%, rgba(197,160,89,0.3) 100%);
   z-index: 1;
 }
 
@@ -93,7 +108,8 @@ body {
   height: 400px; /* FIKSNA VISINA ZA APSOLUTNO SVE SLIKE */
   object-fit: cover; /* Magija: Slika se savršeno ispunjava bez rastezanja i spljoštavanja */
   border-radius: 12px; /* Isti mekani rubovi */
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1); /* Ista elegantna sjena */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+  border: 1px solid rgba(197, 160, 89, 0.1); /* Suptilni zlatni obrub */ /* Ista elegantna sjena */
   display: block; /* Uklanja sitni razmak ispod slike */
 }
 
@@ -112,15 +128,15 @@ body {
 
 .service-text p {
   font-size: 1.1rem;
-  color: #333333; 
+  color: #CCCCCC; 
   line-height: 1.7;
   margin-bottom: 15px;
 }
 
 /* Okvirić za "Benefit" ispod masaža */
 .service-text .benefit {
-  color: #1A1A1A; 
-  background-color: #F0EDE5; 
+  color: #E0E0E0; 
+  background-color: rgba(197, 160, 89, 0.05); /* Suptilna zlatna */ 
   padding: 15px 20px;
   border-left: 4px solid #C5A059;
   font-style: italic;
@@ -156,6 +172,25 @@ body {
   .service-text .benefit {
     text-align: left; /* Benefit ostaje lijevo poravnat radi čitljivosti */
   }
+}
+
+
+/* ================================
+   LINKOVI
+=================================== */
+.link-saznaj-vise {
+  color: #C5A059;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.link-saznaj-vise:hover {
+  color: #E2C77E;
+  transform: translateX(5px);
 }
 
 /* ================================
