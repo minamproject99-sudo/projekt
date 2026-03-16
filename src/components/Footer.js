@@ -21,7 +21,7 @@ const Footer = () => {
     </div>
     
     <div class="cta-caption">
-      📍 Pula, [Verudela,8] • Dostupni termini unutar 72h
+      📍 Pula, [Verudela 8] • Dostupni termini unutar 72h
     </div>
   </div>
 </section>
@@ -79,10 +79,10 @@ const Footer = () => {
     <div class="container">
       <div class="bottom-content">
         <span>© 2026 Happy And Healthy. Sva prava pridržana.</span>
-        <div class="bottom-links">
+        {/* <div class="bottom-links">
           <a href="/uvjeti">Opći uvjeti</a>
           <a href="/privatnost">Politika privatnosti</a>
-        </div>
+        </div> */}
       </div>
     </div>
   </div>

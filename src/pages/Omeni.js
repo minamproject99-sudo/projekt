@@ -1,91 +1,94 @@
-import { useEffect, useState } from "react";
-import Loader from "../components/Loader";
-import Nav from "../components/Nav";
-import './Omeni.css'; 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Omeni.css';
 
 const Omeni = () => {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Ako si promijenila ID, pazi da ovdje ostane tvoj točan ID stranice (npr. 1213)
-    const apiUrl = "https://front2.edukacija.online/backend/wp-json/wp/v2/pages/1213?_embed";
-
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.id) {
-          setPosts([data]);
-        } else {
-          console.warn("API nije vratio očekivane podatke:", data);
-        }
-      })
-      .catch((error) => console.error("Greška pri dohvatu:", error))
-      .finally(() => setLoading(false));
-  }, []);
-
   return (
-    <>
-      <Nav />
-      {loading && <Loader />}
+    <div className="omeni-page">
+      
+      {/* --- HERO NASLOVNA SEKCIJA --- */}
+      <div 
+        className="hero-omeni" 
+        style={{ backgroundImage: "url('/img/hero-omeni.png')" }}
+      >
+        <div className="hero-overlay">
+          {/* <h1>Moja Priča</h1>
+          <p className="hero-podnaslov">Upoznajmo se kroz dodir i povjerenje</p> */}
+        </div>
+      </div>
 
-      <div className="omeni-page">
-        <div className="container">
-          <div className="row justify-content-center">
+      <div className="omeni-content">
+        
+        {/* 1. SEKCIJA: Tko sam ja (Slika lijevo, Tekst desno) */}
+        <div className="omeni-sekcija">
+          <div className="omeni-slika-wrapper personal-img">
+            <img 
+              src="/img/o-meni.png" 
+              alt="Nataša - Moja priča" 
+              className="omeni-img" 
+            />
+          </div>
+          
+          <div className="omeni-tekst">
+            <h2>Dobrodošli u moj svijet</h2>
+            <p>
+              Zovem se Nataša i moja misija je pomoći ti da ponovno pronađeš balans 
+              između uma i tijela. Kroz godine učenja i rada, shvatila sam da masaža 
+              nije samo fizički tretman, već duboki proces opuštanja i iscjeljenja.
+            </p>
+            <p>
+              U svom radu spajam razne tehnike, intuiciju i potpuno individualan 
+              pristup. Svako tijelo priča svoju priču, a moj zadatak je pažljivo ga 
+              poslušati i pružiti mu točno ono što mu u tom trenutku treba.
+            </p>
             
-            {posts?.map((page) => {
-              const title = page.title.rendered;
-              const content = page.content.rendered;
-              
-              const media = page._embedded?.["wp:featuredmedia"]?.[0];
-              const imageUrl = 
-                media?.media_details?.sizes?.full?.source_url || 
-                media?.source_url || 
-                media?.media_details?.sizes?.large?.source_url;
-
-              return (
-                <div key={page.id} className="col-lg-10 col-md-12">
-                  
-                  {/* ZAGLAVLJE */}
-                  <div className="page-header text-center">
-                    <h1 className="naslov-1" dangerouslySetInnerHTML={{ __html: title }} />
-                    <p className="podnaslov-tamni">Tvoje putovanje prema balansu počinje ovdje.</p>
-                  </div>
-
-                  {/* ISTAKNUTA SLIKA */}
-                  {imageUrl && (
-                    <div className="featured-image-wrapper">
-                      <img src={imageUrl} className="premium-featured-image" alt="O meni" />
-                    </div>
-                  )}
-
-                  {/* WORDPRESS SADRŽAJ */}
-                  <div className="o-meni-wp-content" dangerouslySetInnerHTML={{ __html: content }} />
-
-                </div>
-              );
-            })}
-
+            {/* Luksuzni citat */}
+            <blockquote className="premium-quote">
+              "Tvoje tijelo je tvoj najvažniji alat i tvoj jedini pravi dom. 
+              Brini o njemu kako bi ono brinulo o tebi."
+            </blockquote>
           </div>
         </div>
 
-        {/* --- NOVI LUKSUZNI "POVEŽIMO SE" GUMB NA DNU STRANICE --- */}
-        {!loading && (
-          <div className="premium-contact-section text-center">
-            <h3 className="contact-heading">Započnimo tvoju transformaciju.</h3>
-            <a 
-              href="https://wa.me/385976065629?text=Pozdrav!%20Čitala%20sam%20stranicu%20O%20meni%20i%20voljela%20bih%20se%20naručiti." 
-              className="btn-premium-gold" 
-              target="_blank" 
-              rel="noreferrer"
+        {/* 2. SEKCIJA: Moj pristup (Tekst lijevo, Slika desno) */}
+        <div className="omeni-sekcija reverse">
+          <div className="omeni-tekst">
+            <h2>Moj pristup i vizija</h2>
+            <p>
+              Vjerujem da prava njega počinje u trenutku kada uđeš u moj prostor. 
+              Miris eteričnih ulja, ugodna glazba i potpuni mir kreirani su s 
+              namjerom da sve tvoje brige ostanu ispred vrata.
+            </p>
+            
+            <h3 className="omeni-podnaslov">Što možeš očekivati?</h3>
+            <ul className="premium-lista">
+              <li><strong>Potpuna posvećenost:</strong> Tretman prilagođavam tvom trenutnom stanju i potrebama.</li>
+              <li><strong>Vrhunska ulja:</strong> Koristim isključivo prirodne, ručno rađene pripravke.</li>
+              <li><strong>Siguran prostor:</strong> Mjesto gdje se možeš potpuno opustiti i biti svoja.</li>
+            </ul>
+
+            {/* WhatsApp Gumb s pripremljenom porukom */}
+            {/* <a 
+              href="https://wa.me/385976065629?text=Pozdrav!%20Čitala%20sam%20stranicu%20O%20meni%20i%20voljela%20bih%20se%20naručiti%20na%20masažu." 
+              className="btn-premium-gold"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <i className="fab fa-whatsapp"></i> POVEŽIMO SE
-            </a>
+              POVEŽIMO SE (WhatsApp)
+            </a> */}
           </div>
-        )}
+          
+          <div className="omeni-slika-wrapper">
+            <img 
+              src="/img/sportska-4.png" 
+              alt="Moj radni prostor i pristup" 
+              className="omeni-img" 
+            />
+          </div>
+        </div>
 
       </div>
-    </>
+    </div>
   );
 };
 

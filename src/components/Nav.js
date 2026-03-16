@@ -71,7 +71,7 @@ const Nav = () => {
                 </ul>
               </li>
 
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
                   to="#"
@@ -86,9 +86,9 @@ const Nav = () => {
                   <li><Link className="dropdown-item" to="/ljekoviti-pripravci">Ljekoviti pripravci</Link></li>
                   <li><Link className="dropdown-item" to="/kreme-i-macerati">Kreme i macerati</Link></li>
                 </ul>
-              </li>
+              </li> */}
 
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
                   to="#"
@@ -103,7 +103,7 @@ const Nav = () => {
                   <li><Link className="dropdown-item" to="/buddha-vipassana">Buddha Vipassana</Link></li>
                   <li><Link className="dropdown-item" to="/Buddha-vipassana-saying-yes">Buddha Vipassana Saying YES</Link></li>
                 </ul>
-              </li>
+              </li> */}
 
               <li className="nav-item">
                 <Link className="nav-link" to="/poklon-bon">Poklon Bon</Link>

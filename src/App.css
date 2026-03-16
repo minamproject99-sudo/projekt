@@ -476,7 +476,7 @@ footer img {
 }
 
 .btn-secondary:hover {
-  background-color: #fff;
+  background-color: #D4B378;
   color: #1A1A1A;
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(255, 255, 255, 0.2);
@@ -504,7 +504,7 @@ footer img {
 
 .predkraj {
     background-color: #1A1A1A;
-    color: #ffffff;
+    /* color: #C5A059; */
     padding: 100px 0;
     text-align: center;
     position: relative;
@@ -515,6 +515,7 @@ footer img {
     .predkraj h3 {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 300;
+    color: #C5A059;
     font-family: "Quicksand", "sans-serif";
         line-height: 1.2;
     margin-bottom: 24px;
@@ -523,6 +524,7 @@ footer img {
 
     .predkraj p {
     font-size: 1.25rem;
+    color: #ffffff;
     line-height: 1.6;
     max-width: 600px;
     font-family: "Quicksand", "sans-serif";

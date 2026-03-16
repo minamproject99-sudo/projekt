@@ -80,7 +80,7 @@ const Naslovnica = () => {
               <h2>Ljekovite kreme i melemi</h2>
               <p>Bogate teksture na bazi pčelinjeg voska i bilja, stvorene za dubinsku njegu i umirenje kože. Nježno hrane kožu, vraćaju joj elastičnost i štite ju od vanjskih utjecaja.</p>
               <p className="benefit"><strong>Benefit:</strong> Dubinska njega, umirenje iritacija i zaštita kože od isušivanja.</p>
-              <a href="/aromaterapija" className="link-saznaj-vise">Saznaj više o kremama &rarr;</a>
+              {/* <a href="/aromaterapija" className="link-saznaj-vise">Saznaj više o kremama &rarr;</a> */}
             </div>
           </div>
 
@@ -93,7 +93,7 @@ const Naslovnica = () => {
               <h2>Aromaterapijska ulja</h2>
               <p>Pažljivo birane mješavine koje uravnotežuju duh i opuštaju tijelo. Svaka kapljica nosi esenciju čistog ljekovitog bilja koja djeluje opuštajuće na živčani sustav.</p>
               <p className="benefit"><strong>Benefit:</strong> Otpuštanje stresa, bolji san i podizanje energije.</p>
-              <a href="/aromaterapija" className="link-saznaj-vise">Saznaj više o uljima &rarr;</a>
+              {/* <a href="/aromaterapija" className="link-saznaj-vise">Saznaj više o uljima &rarr;</a> */}
             </div>
           </div>
 
@@ -106,7 +106,7 @@ const Naslovnica = () => {
               <h2>Macerati (Biljna ulja)</h2>
               <p>Čista snaga sunca i bilja (poput nevena, gospine trave i lavande) za najprirodniju njegu lica i tijela. Stara tradicija sačuvana u svakoj bočici za dubinsku regeneraciju.</p>
               <p className="benefit"><strong>Benefit:</strong> Prirodna obnova oštećene kože i smirenje upalnih procesa.</p>
-              <a href="/aromaterapija" className="link-saznaj-vise">Saznaj više o maceratima &rarr;</a>
+              {/* <a href="/aromaterapija" className="link-saznaj-vise">Saznaj više o maceratima &rarr;</a> */}
             </div>
           </div>
 

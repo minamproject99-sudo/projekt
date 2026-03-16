@@ -1,15 +1,15 @@
 /* ================================
    VELORETTI NAVBAR DIZAJN
 =================================== */
-.img nav-logo {
-  height: 100px;
-  width: 100px;
+.nav-logo {
+  height: 140px;
+  width: 140px;
     object-fit: contain;
 }
   
 /* Početno stanje: Blago prozirna crna (kad je na vrhu stranice iznad Hero slike) */
 .custom-happy-nav {
-  background-color: rgba(26, 26, 26, 0.7); /* Crna s 70% vidljivosti */
+  background-color: rgba(26, 26, 26, 0.5); /* Crna s 70% vidljivosti */
   backdrop-filter: blur(10px); /* Zamuti pozadinu ispod menija (efekt stakla) */
   -webkit-backdrop-filter: blur(10px);
   padding: 15px 0;
