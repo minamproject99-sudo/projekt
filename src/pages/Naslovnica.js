@@ -62,7 +62,7 @@ const Naslovnica = () => {
       </section>
 
       {/* 3. AROMATERAPIJA & POZIV (Identifikator Z-layouta kao kod masaža) */}
-      <section className="aroma-kontakt py-5">
+      <section id="aromaterapija" className="aroma-kontakt py-5">
         <div className="container">
           
           {/* Uvod u aromaterapiju */}
@@ -115,9 +115,17 @@ const Naslovnica = () => {
             <div className="call-box mt-5">
               <h3>Čujemo se? Volim osobni pristup.</h3>
               <p>Budući da su moji pripravci rađeni u malim serijama i često su sezonski, najviše volim kad se čujemo direktno. Tako ti mogu najbolje savjetovati koji bi pripravak najbolje odgovarao tvojim trenutnim potrebama.</p>
-              <a href="tel:+385976065629" className="btn-primary mt-4">NAZOVI ZA SAVJET I NARUDŽBU</a>
+              <a 
+                href="https://wa.me/385976065629?text=Pozdrav!%20Zanimaju%20me%20vaši%20ručno%20rađeni%20pripravci%20i%20trebam%20savjet." 
+                className="btn-primary mt-4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                NAZOVI ZA SAVJET I NARUDŽBU
+              </a>
             </div>
           </div>
+
 
         </div>
       </section>

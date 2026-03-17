@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import 'animate.css';
 import "./App.css";
+import ScrollToTop from "./components/ScrollToTop";
+
 
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -34,6 +36,7 @@ import PocetnaVjezba from "./pages/PocetnaVjezba";
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop /> 
       <Nav />
 
       <Routes>

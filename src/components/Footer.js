@@ -45,7 +45,7 @@ const Footer = () => {
           <li><a href="/relax-masaza">Relax masaža</a></li>
           <li><a href="/sportska-masaza">Sportska masaža</a></li>
           <li><a href="/poklon-bon">Poklon bonovi</a></li>
-          <li><a href="/aromaterpija">Aromaterapija</a></li>
+          <li><a href="/#aromaterapija">Aromaterapija</a></li>
           <li></li>
         </ul>
       </div>
@@ -63,14 +63,29 @@ const Footer = () => {
       </div>
       
    
-      <div class="footer-col">
+      <div className="footer-col">
         <h5>Prati nas</h5>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          {/* <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a> */}
+        <div className="social-links">
+          <a 
+            href="https://www.instagram.com/happy.and.healthy.obrt/" 
+            aria-label="Instagram"
+            target="_blank" 
+            rel="noreferrer"
+          >
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a 
+            href="https://www.facebook.com/profile.php?id=100087888142763#" 
+            aria-label="Facebook"
+            target="_blank" 
+            rel="noreferrer"
+          >
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          {/* <a href="#" aria-label="Youtube"><i className="fab fa-youtube"></i></a> */}
         </div>
       </div>
+
       
     </div>
   </div>
