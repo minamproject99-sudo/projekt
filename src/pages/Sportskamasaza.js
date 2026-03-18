@@ -23,7 +23,7 @@ const SportskaMasaza = () => {
         <main className="happy-main dark-theme">
 
           {/* 1. HERO SEKCIJA */}
-          <section className="hero-h" style={{ backgroundImage: `url('/img/sportska-hero.png')` }}>
+          <section className="hero-h" style={{ backgroundImage: `url('/ncacic/img/sportska-hero.png')` }}>
             <div className="hero-overlay"></div>
             <div className="container hero-content">
               <h1 className="naslov-1">Sportska masaža: Brži oporavak i vrhunska izvedba</h1>
@@ -38,7 +38,7 @@ const SportskaMasaza = () => {
               {/* Blok 1 - Zašto odabrati sportsku masažu? */}
               <div className="service-row">
                 <div className="service-img-wrapper">
-                  <img src="/img/sportska-1.png" alt="Sportska masaža duboka tkiva" />
+                  <img src={`${process.env.PUBLIC_URL}/img/sportska-1.png`} alt="Sportska masaža duboka tkiva" />
                 </div>
                 <div className="service-text">
                   <h2>Zašto odabrati sportsku masažu?</h2>
@@ -55,7 +55,7 @@ const SportskaMasaza = () => {
               {/* Blok 2 - Moj pristup */}
               <div className="service-row reverse">
                 <div className="service-img-wrapper">
-                  <img src="/img/sportska-4.png" alt="Osobni pristup masaži" />
+                  <img src={`${process.env.PUBLIC_URL}/img/sportska-4.png`} alt="Osobni pristup masaži" />
                 </div>
                 <div className="service-text">
                   <h2>Moj pristup: Razgovor prije svega</h2>
@@ -73,7 +73,7 @@ const SportskaMasaza = () => {
               {/* Blok 3 - Zakazivanje termina */}
               <div className="service-row">
                 <div className="service-img-wrapper">
-                  <img src="/img/o-meni.png" alt="Rezervacija termina za masažu" />
+                  <img src={`${process.env.PUBLIC_URL}/img/o-meni.png`} alt="Rezervacija termina za masažu" />
                 </div>
                 <div className="service-text">
                   <h2>Čujemo se? Rezerviraj svoj termin pozivom</h2>
