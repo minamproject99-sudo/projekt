@@ -1,0 +1,207 @@
+/* Font korišten i u ostalim komponentama projekta */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+.kontakt-page {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #1A1A1A; /* Tamna luxury pozadina iz ostalih stranica */
+  color: #E8E8E8;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* 1. Blok za WordPress sadržaj - LUKSUZNA VERZIJA */
+.kontakt-wp-sadrzaj {
+  background-color: transparent; /* Mičemo bijelu pozadinu da se stopi s tamnom temom */
+  color: #E8E8E8;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Uljepšavanje naslova (Happy & Healthy, Radno vrijeme) iz WordPressa */
+.kontakt-wp-sadrzaj h1, 
+.kontakt-wp-sadrzaj h2, 
+.kontakt-wp-sadrzaj h3,
+.kontakt-wp-sadrzaj h4 {
+  font-family: 'Quicksand', serif; /* Premium font za naslove */
+  color: #C5A059; /* Zlatna boja */
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Uljepšavanje običnog teksta (adresa, brojevi telefona) */
+.kontakt-wp-sadrzaj p {
+  font-size: 1.1rem;
+  color: #B0B0B0; /* Svijetlo siva za lakše čitanje na tamnom */
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Ako si u WP stavila linkove na brojeve telefona (+385...) */
+.kontakt-wp-sadrzaj a {
+  color: #C5A059;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.kontakt-wp-sadrzaj a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(197, 160, 89, 0.4);
+}
+
+/* Stilizacija WordPress Gutenberg stupaca (za adresu i radno vrijeme) */
+.kontakt-wp-sadrzaj .wp-block-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 50px;
+  background-color: #242424; /* Ista tamna kartica kao i kontakt forma */
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(197, 160, 89, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.kontakt-wp-sadrzaj .wp-block-column {
+  flex: 1;
+}
+
+/* Stilizacija slike koju vuče iz WP-a da izgleda premium */
+.kontakt-wp-sadrzaj img,
+.kontakt-wp-sadrzaj .wp-block-cover {
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+/* Responzivnost za mobitele (da stupci idu jedan ispod drugog) */
+@media (max-width: 768px) {
+  .kontakt-wp-sadrzaj .wp-block-columns {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+}
+
+
+/* 2. Container za formu ispod WP sadržaja */
+.kontakt-forma-container {
+  max-width: 800px;
+  margin: 80px auto 0 auto;
+  padding: 0 20px;
+}
+
+.form-wrapper {
+  background-color: #242424; /* Malo svjetlija crna za karticu forme da se odvoji od pozadine */
+  border: 1px solid rgba(197, 160, 89, 0.2); /* Suptilni zlatni rub */
+  border-radius: 8px;
+  padding: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-tekst {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-tekst h2 {
+  color: #C5A059; /* Luksuzna zlatna */
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.form-tekst p {
+  color: #B0B0B0;
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Stilizacija samih inputa */
+.luxury-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-grupa {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-grupa label {
+  color: #C5A059;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-grupa input,
+.form-grupa textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #555;
+  color: #ffffff;
+  padding: 12px 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-grupa input:focus,
+.form-grupa textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #C5A059; /* Zlatni fokus */
+  box-shadow: 0 5px 5px -5px rgba(197, 160, 89, 0.3);
+}
+
+.form-grupa input::placeholder,
+.form-grupa textarea::placeholder {
+  color: #666;
+  font-weight: 300;
+}
+
+.form-grupa textarea {
+  resize: vertical;
+}
+
+/* Premium Gumb */
+.btn-premium {
+  margin-top: 20px;
+  padding: 16px 40px;
+  background-color: #C5A059;
+  color: #1A1A1A;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center; /* Centrira gumb */
+}
+
+.btn-premium:hover {
+  background-color: #dfb96e;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
+}
+
+@media (max-width: 768px) {
+  .form-wrapper {
+    padding: 30px 20px;
+  }
+  
+  .form-tekst h2 {
+    font-size: 1.8rem;
+  }
+}

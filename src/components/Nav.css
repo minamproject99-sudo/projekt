@@ -1,0 +1,137 @@
+/* ================================
+   VELORETTI NAVBAR DIZAJN
+=================================== */
+.nav-logo {
+  height: 140px;
+  width: 140px;
+    object-fit: contain;
+}
+  
+/* Početno stanje: Blago prozirna crna (kad je na vrhu stranice iznad Hero slike) */
+.custom-happy-nav {
+  background-color: rgba(26, 26, 26, 0.5); /* Crna s 70% vidljivosti */
+  backdrop-filter: blur(10px); /* Zamuti pozadinu ispod menija (efekt stakla) */
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px 0;
+  transition: all 0.4s ease-in-out;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.1); /* Jedva vidljiva zlatna linija dolje */
+}
+
+/* Stanje nakon skrolanja: Puna tamna boja, manji padding */
+.custom-happy-nav.scrolled {
+  background-color: rgba(26, 26, 26, 0.98);
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+/* Tekst linkova u meniju (bijeli dok se ne pređe mišem) */
+.custom-happy-nav .navbar-nav .nav-link {
+  color: #FFFFFF !important;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin: 0 10px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* Hover efekt: Slova postaju ZLATNA */
+.custom-happy-nav .navbar-nav .nav-link:hover,
+.custom-happy-nav .navbar-nav .nav-link:focus,
+.custom-happy-nav .navbar-nav .nav-link.active {
+  color: #C5A059 !important;
+}
+
+/* Zlatna linijica ispod linka koja iskoči na hover */
+.custom-happy-nav .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #C5A059;
+  transition: width 0.3s ease;
+}
+
+.custom-happy-nav .navbar-nav .nav-link:hover::after {
+  width: 80%;
+}
+
+/* Kontakt gumb stiliziran kao istaknuti element */
+.custom-happy-nav .btn-kontakt {
+  background-color: transparent !important;
+  border: 1px solid #C5A059 !important;
+  border-radius: 30px;
+  padding: 8px 20px !important;
+  color: #C5A059 !important;
+}
+
+.custom-happy-nav .btn-kontakt:hover {
+  background-color: #C5A059 !important;
+  color: #1A1A1A !important;
+}
+
+.custom-happy-nav .btn-kontakt::after {
+  display: none; /* Mičemo crticu s hovera za ovaj gumb */
+}
+
+/* ================================
+   DROPDOWN (Padajući izbornici)
+=================================== */
+/* Tamna pozadina za dropdown menije */
+.custom-dropdown {
+  background-color: #1A1A1A !important;
+  border: 1px solid rgba(197, 160, 89, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+  padding: 10px 0 !important;
+  margin-top: 15px !important;
+}
+
+/* Linkovi unutar dropdowna */
+.custom-dropdown .dropdown-item {
+  color: #FFFFFF !important;
+  font-family: 'Quicksand', sans-serif;
+  padding: 10px 20px !important;
+  transition: all 0.3s ease;
+}
+
+/* Hover na linkove unutar dropdowna */
+.custom-dropdown .dropdown-item:hover {
+  background-color: rgba(197, 160, 89, 0.1) !important;
+  color: #C5A059 !important;
+  padding-left: 25px !important; /* Elegantan pomak udesno kad se pređe mišem */
+}
+
+/* ================================
+   MOBILNI IZGLED (Hamburger meni)
+=================================== */
+/* Zlatna boja za "Hamburger" ikonicu */
+.custom-happy-nav .navbar-toggler {
+  border-color: rgba(197, 160, 89, 0.5) !important;
+}
+
+.custom-happy-nav .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28197, 160, 89, 1%29' stroke-linecap='round' stroke-miterlimit='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+@media (max-width: 991px) {
+  .custom-happy-nav {
+    background-color: #1A1A1A; /* Puna tamna boja na mobitelima odmah */
+  }
+  
+  .custom-dropdown {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .custom-happy-nav .navbar-nav {
+    padding-top: 20px;
+  }
+}
